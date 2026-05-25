@@ -10,7 +10,7 @@ function TaskDetail() {
 
   return (
     <div>
-      <Link to="/">← Retour au Dashboard</Link>
+      <Link to="/">Retour au Dashboard</Link>
       <h1>{task.titre}</h1>
       <p>{task.description}</p>
       <span>{task.statut}</span>
