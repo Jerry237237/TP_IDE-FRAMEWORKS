@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "categorie": "Formule 1",
+    "libelle": "Quel pilote a remporté le plus de championnats du monde de F1 ?",
+    "options": ["Ayrton Senna", "Michael Schumacher", "Lewis Hamilton", "Sebastian Vettel"],
+    "bonne_reponse": "Lewis Hamilton"
+  },
+  {
+    "id": 2,
+    "categorie": "Formule 1",
+    "libelle": "Quelle écurie a dominé la saison 2023 de F1 ?",
+    "options": ["Mercedes", "Ferrari", "Red Bull", "McLaren"],
+    "bonne_reponse": "Red Bull"
+  },
+  {
+    "id": 3,
+    "categorie": "MotoGP",
+    "libelle": "Quel pilote est surnommé 'Il Dottore' en MotoGP ?",
+    "options": ["Marc Marquez", "Valentino Rossi", "Jorge Lorenzo", "Casey Stoner"],
+    "bonne_reponse": "Valentino Rossi"
+  },
+  {
+    "id": 4,
+    "categorie": "MotoGP",
+    "libelle": "Combien de titres mondiaux Valentino Rossi a-t-il remportés ?",
+    "options": ["7", "8", "9", "10"],
+    "bonne_reponse": "9"
+  },
+  {
+    "id": 5,
+    "categorie": "NBA",
+    "libelle": "Quel joueur est surnommé 'The King' en NBA ?",
+    "options": ["Kobe Bryant", "Michael Jordan", "LeBron James", "Stephen Curry"],
+    "bonne_reponse": "LeBron James"
+  },
+  {
+    "id": 6,
+    "categorie": "NBA",
+    "libelle": "Quelle équipe a remporté le plus de titres NBA ?",
+    "options": ["Los Angeles Lakers", "Chicago Bulls", "Boston Celtics", "Golden State Warriors"],
+    "bonne_reponse": "Boston Celtics"
+  },
+  {
+    "id": 7,
+    "categorie": "Manga",
+    "libelle": "Quel est le manga le plus vendu de tous les temps ?",
+    "options": ["Naruto", "Dragon Ball", "One Piece", "Bleach"],
+    "bonne_reponse": "One Piece"
+  },
+  {
+    "id": 8,
+    "categorie": "Manga",
+    "libelle": "Qui est l'auteur de Dragon Ball ?",
+    "options": ["Eiichiro Oda", "Masashi Kishimoto", "Akira Toriyama", "Tite Kubo"],
+    "bonne_reponse": "Akira Toriyama"
+  },
+  {
+    "id": 9,
+    "categorie": "Anime",
+    "libelle": "Dans quel anime trouve-t-on le personnage de Naruto Uzumaki ?",
+    "options": ["Bleach", "One Piece", "Naruto", "Dragon Ball"],
+    "bonne_reponse": "Naruto"
+  },
+  {
+    "id": 10,
+    "categorie": "Anime",
+    "libelle": "Quel studio a produit l'anime 'Demon Slayer' ?",
+    "options": ["Madhouse", "Ufotable", "Bones", "Mappa"],
+    "bonne_reponse": "Ufotable"
+  }
+]
