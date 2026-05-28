@@ -1,16 +1,23 @@
-# React + Vite
+# TP_IDE-FRAMEWORKS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# TaskFlow – Gestionnaire de tâches d'équipe
 
-Currently, two official plugins are available:
+Application web de type Single Page Application (SPA) développée avec React et Vite.js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Information de l'étudiant
+    -Nom&Prenom: DON MACHEKENG JERRY MANDELSONE
+    -Matricule: 23ENSPM0445
+    -Option: RESEAU ET TELECOMMUNICATION
 
-## React Compiler
+# 1.Clonage du dépôt
+    git clone https://github.com/Jerry237237/TP_IDE-FRAMEWORKS
+    cd TP_IDE-FRAMEWORKS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 2.Initialisation :
+    npm create vite@latest frontend----template react
+    cd frontend
+# 3.Installation des dépendances
+    npm install
+# 4.Lancement du serveur de développement local
+    npm run dev
+    Ouvre ensuite le navigateur et acceder à : http://localhost:5173
