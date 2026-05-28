@@ -1,16 +1,33 @@
-# React + Vite
+# PolyQuiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Une plateforme de compétition intellectuelle en ligne proposant des quiz chronométrés, notamment axés sur:
+# 1.Les sports mécaniques (F1, Moto GP)
+# 2.Les sports collectifs (NBA)
+# 3.La culture japonaise (Manga/Anime)
 
-Currently, two official plugins are available:
+# Information de l'étudiant
+    -Nom&Prenom: DON MACHEKENG JERRY MANDELSONE
+    -Matricule: 23ENSPM0445
+    -Option: RESEAU ET TELECOMMUNICATION
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# FOnctionnement de PolyQuiz
+    -Une connexion via un speudo
+    -Un questionnnaire de 10 questions pour le moment
+    -Quatre choix de réponse (A, B, C, D) pour chaque question
+    -Un score affiché continuellement et actualiser
+    -La fin du chronométre induit la fin du quiz
+    -Un score final avec un ratio de bonne réponse et le meilleur score 
 
-## React Compiler
+# 1.Clonage du dépôt
+    git clone https://github.com/Jerry237237/TP_IDE-FRAMEWORKS/tree/main/PolyQuiz
+    cd PolyQuiz
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 2.Initialisation :
+    npm create vite@latest PolyQuiz
+    cd PolyQuiz
+# 3.Installation des dépendances
+    npm install
+# 4.Lancement du serveur de développement local
+    npm run dev
+    Ouvre ensuite le navigateur et acceder à : http://localhost:5173
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
