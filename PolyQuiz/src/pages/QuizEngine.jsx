@@ -1,6 +1,7 @@
-import { useReducer } from "react";
+import { useReducer, useRef, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
+import { UserContext } from "../context/UserContext";
 
 const etatInitial = {
   indexQuestion: 0,
@@ -54,6 +55,35 @@ function QuizEngine() {
   const [state, dispatch] = useReducer(quizReducer, etatInitial);
   const { data: questions, loading, error } = useFetch("/questions.json");
   const navigate = useNavigate();
+  const { setMeilleurScore, meilleurScore } = useContext(UserContext);
+
+  const [tempsRestant, setTempsRestant] = useState(60);
+  const intervalRef = useRef(null);
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setTempsRestant((t) => {
+        if (t <= 1) {
+          clearInterval(intervalRef.current);
+          dispatch({ type: "FINISH_QUIZ" });
+          return 0;
+        }
+        return t - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  useEffect(() => {
+    if (state.statut === "termine") {
+      clearInterval(intervalRef.current);
+      if (state.score > meilleurScore) {
+        setMeilleurScore(state.score);
+      }
+      navigate("/resultats", { state: { score: state.score } });
+    }
+  }, [state.statut]);
 
   if (loading) return <p>Chargement des questions...</p>;
   if (error) return <p>Erreur : {error}</p>;
@@ -69,12 +99,9 @@ function QuizEngine() {
     });
   };
 
-  if (state.statut === "termine") {
-    navigate("/resultats");
-  }
-
   return (
     <div>
+      <p>⏱ Temps restant : {tempsRestant}s</p>
       <p>Question {state.indexQuestion + 1} / {questions.length}</p>
       <p>Score : {state.score}</p>
       <h2>{questionCourante.libelle}</h2>
