@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const taskRoutes = require('./routes/taskRoutes');
 
 const app = express();
@@ -9,6 +10,10 @@ const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
 app.use(express.json());
+
+app.use(cors({
+  origin: 'http://localhost:5173'
+}));
 
 app.use('/api/tasks', taskRoutes);
 
