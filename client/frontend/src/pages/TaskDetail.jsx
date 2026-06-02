@@ -1,19 +1,28 @@
 import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function TaskDetail() {
   const { id } = useParams();
+  const [task, setTask] = useState(null);
 
-  const donneesSauvegardees = localStorage.getItem("taskflow_data");
-  const tasks = JSON.parse(donneesSauvegardees);
+  useEffect(() => {
+    fetch("http://localhost:5000/api/tasks")
+      .then((res) => res.json())
+      .then((data) => {
+        const taskTrouvee = data.find(t => t._id === id);
+        setTask(taskTrouvee);
+      })
+      .catch((err) => console.error("Erreur :", err));
+  }, [id]);
 
-  const task = tasks.find(t => t.id === Number(id));
+  if (!task) return <p>Chargement...</p>;
 
   return (
     <div>
-      <Link to="/">Retour au Dashboard</Link>
-      <h1>{task.titre}</h1>
+      <Link to="/">← Retour au Dashboard</Link>
+      <h1>{task.title}</h1>
       <p>{task.description}</p>
-      <span>{task.statut}</span>
+      <span>{task.status}</span>
     </div>
   );
 }
